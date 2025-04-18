@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    font-size: medium;
+    background-color: #2d2d30;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.header {
+    text-align: center;
+    font-family: fantasy;
+    font-size: large;
+    color: aliceblue;
+    background-color: #2d2d30;
+    border-radius: 30px;
+    border: 10px solid;
+    border-color: #252526;
+    box-shadow: #1e1e1e 5px 5px 3px;
+}
+
+.content {
+    text-align: justify;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+hr {
+    margin: 3%;
+}
+
+pre {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1% 1% 1% 10%;
+}
