@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho e navegação principal -->
+    <header>
+        <nav>
+            <ul>
+                <!-- Alternador de tema claro/escuro -->
+                <li>
+                    <input id="theme-toggle" type="checkbox" name="mode">
+                    <label class="label" for="theme-toggle">
+                        <!-- A imagem será definida via CSS -->
+                        <img src="assets/light_mode.svg" style="width: 50px; opacity: 0;" alt="Toggle theme">
+                    </label>
+                </li>
+                <!-- Links de navegação -->
+                <li><button onclick="scrollToSection('lore')">Lore</button></li>
+                <li><button onclick="scrollToSection('novo')">Novo</button></li>
+                <li><button onclick="scrollToSection('geral')">Geral</button></li>
+                <li><button onclick="scrollToSection('personagens')">Personagens</button></li>
+                <li><button onclick="scrollToSection('bosses')">Bosses</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="content">
+        <section id="lore">
+            <h1>Elden Ring - Lore</h1>
+            <p>
+                Elden Ring é um RPG de ação desenvolvido pela FromSoftware e publicado pela Bandai Namco. Com roteiro colaborativo de Hidetaka Miyazaki e George R. R. Martin, o jogo se passa nas Terras Intermédias, um mundo em ruínas governado por semideuses corrompidos pelo poder do Elden Ring.
+            </p>
+            <p>
+                O jogador assume o papel do "Maculado", um exilado convocado para restaurar o Elden Ring e se tornar o novo Lorde Pristino. O mundo é expansivo e interconectado, repleto de segredos, masmorras, chefes desafiadores e um rico pano de fundo mitológico.
+            </p>
+            <p>
+                A narrativa se desenrola de forma ambiental e indireta, como é característico dos jogos Soulsborne. Descobrir as motivações dos personagens e a história do mundo requer exploração cuidadosa e interpretação dos itens, diálogos e eventos.
+            </p>
+        </section>
+
+        <section id="novo">
+            <h2>Gameplay</h2>
+            <p>
+                Elden Ring combina combate corpo-a-corpo, magia, e elementos furtivos. O sistema de combate é responsivo e permite personalização detalhada do personagem. Um dos grandes diferenciais é a possibilidade de explorar o mundo a cavalo e acessar áreas vastas de forma livre.
+            </p>
+            <p>
+                Também é possível invocar aliados, enfrentar inimigos em diferentes horários do dia e experimentar um sistema de progressão aberto, onde o jogador decide o que explorar e quando.
+            </p>
+        </section>
+
+        <section id="geral">
+            <h2>Curiosidades</h2>
+            <ul>
+                <li>O mapa do jogo foi desenhado inicialmente por George R. R. Martin, antes dos eventos do jogo.</li>
+                <li>Possui finais múltiplos dependendo das escolhas do jogador.</li>
+                <li>Há referências a mitologia nórdica, celta e japonesa ao longo do mundo do jogo.</li>
+                <li>O jogo vendeu mais de 20 milhões de cópias em seu primeiro ano.</li>
+            </ul>
+        </section>
+
+        <section id="personagens">
+            <h2>Personagens Principais</h2>
+            <article>
+                <h3>Melina</h3>
+                <p>Uma misteriosa donzela que guia o jogador, oferecendo ajuda e servindo como ponto central para a progressão de nível.</p>
+            </article>
+            <article>
+                <h3>Ranni, a Bruxa</h3>
+                <p>Figura central em uma das linhas narrativas do jogo, Ranni desafia o ciclo do Elden Ring com suas próprias ambições.</p>
+            </article>
+            <article>
+                <h3>Radahn</h3>
+                <p>Um dos semideuses mais temidos das Terras Intermédias. Seu festival de combate é um dos eventos mais memoráveis do jogo.</p>
+            </article>
+        </section>
+
+        <section id="bosses">
+            <h2>Chefes Memoráveis</h2>
+            <ul>
+                <li><strong>Margit, o Agouro Caído</strong>: Um dos primeiros chefes, desafia o jogador a dominar as bases do combate.</li>
+                <li><strong>Malenia, Lâmina de Miquella</strong>: Considerada uma das lutas mais difíceis de toda a franquia Souls.</li>
+                <li><strong>Radagon</strong>: Parte da batalha final, representa o auge do simbolismo religioso do jogo.</li>
+                <li><strong>Besta Pristina</strong>: A entidade final que define o destino do mundo.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Script JS para alternar entre temas claro e escuro -->
+    <script src="index.js">
+    </script>
+</body>
+</html>

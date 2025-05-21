@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+
+  --btnColor: #eeb007;
+  --bg: #232323;
+  --barColor: #31303a;
+  --textColor: #f0f0f0;
+  --transition: 0.3s ease;
+  --fontFamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html[data-theme="light"] {
+  background: var(--bg);
+
+  --btnColor: #7bbfe6;
+  --bg: #f6f7f7;
+  --barColor: #5f8ae9;
+  --textColor: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fontFamily);
+  color: var(--textColor);
+  background-color: var(--bg);
+  transition: background var(--transition), color var(--transition);
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+.label {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: url("assets/light_mode.svg") no-repeat center center;
+  background-size: contain;
+  filter: invert(1);
+  cursor: pointer;
+  transition: filter var(--transition);
+}
+
+input[type=checkbox]:checked + .label {
+  background: url("assets/dark_mode.svg") no-repeat center center;
+  background-size: contain;
+  filter: invert(0);
+}
+
+nav {
+  background-color: var(--barColor);
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background var(--transition);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  width: auto;
+  height: 40px;
+  padding: 0 15px;
+  background-color: var(--btnColor);
+  color: var(--textColor);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background var(--transition), color var(--transition);
+}
+
+button:hover {
+  background-color: darken(var(--btnColor), 10%);
+}
+
+.content {
+  margin-top: 70px;
+  padding: 20px;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+h1, h2 {
+  color: var(--textColor);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--textColor);
+}
