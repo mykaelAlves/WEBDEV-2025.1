@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+    <style>
+        #avancar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        #voltar {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <img id="pokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg">
+    <button id="voltar" onclick="voltarPokemon()">Voltar</button>
+    <button id="avancar" onclick="avancarPokemon()">Avançar</button>
+    <script>
+        let n = 1;
+
+        function avancarPokemon() {
+            if (n < 100) {
+                n++;
+            } else {
+                n = 1;
+            }
+            let pokemon = document.getElementById("pokemon");
+            pokemon.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${n}.svg`;
+        }
+        function voltarPokemon() {
+            if (n > 1) {
+                n--;
+            } else {
+                n = 100;
+            }
+            let pokemon = document.getElementById("pokemon");
+            pokemon.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${n}.svg`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layout Semântico com Flexbox</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+    }
+
+    aside {
+      background-color: #525257;
+      color: #fff;
+      width: 30%;
+      padding: 20px;
+    }
+
+    aside nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    aside nav ul li {
+      margin-bottom: 10px;
+    }
+
+    aside nav ul li a {
+      color: #7cd1c7;
+      text-decoration: none;
+      display: block;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    aside nav ul li a:hover {
+      background-color: #6c6c75;
+    }
+
+    main {
+      width: 70%;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      font-family: fantasy, Arial, Helvetica, sans-serif;
+      margin-top: 0;
+    }
+
+    .image-placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #ccc;
+      margin: 20px 0;
+    }
+
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        flex-direction: column;
+      }
+
+      aside {
+        width: 100%;
+      }
+
+      main {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Desenvolvimento de Software Web</h1>
+  </header>
+
+  <div class="container">
+    <aside>
+      <nav>
+        <ul>
+          <li><a href="https://www.google.com">Google</a></li>
+          <li><a href="https://www.amazon.com">Amazon</a></li>
+          <li><a href="https://www.minecraft.net">Minecraft</a></li>
+          <li><a href="https://www.si3.ufc.br">SI3 UFC</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main>
+      <h1>Questão 01</h1>
+      <h2>Introdução ao HTML Semântico</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut suscipit massa. Nulla facilisi. Curabitur vitae bibendum metus.</p>
+
+      <div class="image-placeholder"></div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, quisquam nisi rem molestias possimus qui sint quae ratione dolores temporibus delectus nulla fugit tempore similique soluta est illum quo at?</p>
+
+      <div class="image-placeholder"></div>
+      <p>Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer at ligula ac nunc convallis vehicula.</p>
+
+      <div class="image-placeholder"></div>
+      <p>Maecenas non justo vitae augue varius feugiat. In ac magna et lacus tincidunt vehicula nec ac sapien. Curabitur vitae lectus vitae urna bibendum sollicitudin.</p>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Minha Página</p>
+    <addres>Mykael</addres>
+  </footer>
+
+</body>
+</html>
